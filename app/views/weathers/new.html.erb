@@ -1,8 +1,7 @@
-<h1>Weather Info</h1>
+<h1>Share Weather Info</h1>
 <% unless @http[:ip] == '127.0.0.1' %>
 <p>Your Current Location: </p>
 <p><%= @http[:city] if @http[:city].present? %>, @http[:country_name] if @http[:country_name].present?</p>
 <% end %>
 <%= render 'form' %>
 
-<%= link_to 'Back', weathers_path %>
