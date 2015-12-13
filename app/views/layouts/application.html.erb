@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "RailsPack" %></title>
+    <%= csrf_meta_tags %>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js" type="text/javascript"></script>
+    <![endif]-->
+
+    <%= stylesheet_link_tag "application", :media => "all" %>
+
+    <!-- For third-generation iPad with high-resolution Retina display: -->
+    <!-- Size should be 144 x 144 pixels -->
+    <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
+
+    <!-- For iPhone with high-resolution Retina display: -->
+    <!-- Size should be 114 x 114 pixels -->
+    <%= favicon_link_tag 'apple-touch-icon-114x114-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '114x114' %>
+
+    <!-- For first- and second-generation iPad: -->
+    <!-- Size should be 72 x 72 pixels -->
+    <%= favicon_link_tag 'apple-touch-icon-72x72-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '72x72' %>
+
+    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+    <!-- Size should be 57 x 57 pixels -->
+    <%= favicon_link_tag 'apple-touch-icon-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png' %>
+
+    <!-- For all other devices -->
+    <!-- Size should be 32 x 32 pixels -->
+    <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
+
+    <%= javascript_include_tag "application" %>
+  </head>
+  <body>
+
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Kaizen Weather</a>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+          <ul class="nav navbar-nav">
+            <!--<li><%#= link_to "Dise", "/path1"  %></li>-->
+            <!--<li><%#= link_to "Link2", "/path2"  %></li>-->
+            <!--<li><%#= link_to "Link3", "/path3"  %></li>-->
+          </ul>
+
+          <ul class="nav navbar-nav pull-right">
+            <% if current_user.present? %>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <%= current_user.last_name if current_user.last_name.present? %> <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><%= link_to 'Logout', destroy_user_session_path, :method => 'delete' %></li>
+                  </ul>
+                </li>
+            <% else %>
+                <li><%= link_to 'Sign In', new_user_session_path %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9">
+          <%= bootstrap_flash %>
+          <%= yield %>
+        </div>
+        <!--<div class="col-lg-3">-->
+          <!--<div class="well sidebar-nav">-->
+            <!--<h3>Sidebar</h3>-->
+            <!--<ul class="nav nav-list">-->
+              <!--<li class="nav-header">Sidebar</li>-->
+              <!--<li><%#= link_to "Link1", "/path1"  %></li>-->
+              <!--<li><%#= link_to "Link2", "/path2"  %></li>-->
+              <!--<li><%#= link_to "Link3", "/path3"  %></li>-->
+            <!--</ul>-->
+          <!--</div>&lt;!&ndash;/.well &ndash;&gt;-->
+        <!--</div>&lt;!&ndash;/span&ndash;&gt;-->
+      </div><!--/row-->
+
+      <footer>
+        <p>&copy; Company 2015</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+  </body>
+</html>

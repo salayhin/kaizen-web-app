@@ -1,0 +1,45 @@
+<%= form_for(@weather) do |f| %>
+  <% if @weather.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@weather.errors.count, "error") %> prohibited this weather from being saved:</h2>
+
+      <ul>
+      <% @weather.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!--<div class="field">-->
+    <%#= f.label :lat %><br>
+    <!--<%#= f.text_field :lat %>-->
+  <!--</div>-->
+  <!--<div class="field">-->
+    <%#= f.label :long %><br>
+    <!--<%#= f.text_field :long %>-->
+  <!--</div>-->
+  <div class="field">
+    <%= f.label :info %><br>
+    <%= f.text_field :info %>
+  </div>
+  <div class="field">
+    <%= f.label :picture %><br>
+    <%= f.file_field :picture %>
+  </div>
+  <!--<div class="field">-->
+    <%#= f.label :user_id %><br>
+    <!--<%#= f.number_field :user_id %>-->
+  <!--</div>-->
+
+  <% unless @http[:ip] == '127.0.0.1'%>
+    <%= f.hidden_field :lat, :value => @http[:latitude] %>
+    <%= f.hidden_field :long, :value => @http[:longitude]%>
+    <%= f.hidden_field :city, :value => @http[:city] %>
+    <%= f.hidden_field :region, :value => @http[:region_name] %>
+    <%= f.hidden_field :country, :value => @http[:country_name] %>
+  <% end %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
