@@ -11,39 +11,15 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :lat %><br>
-    <%= f.text_field :lat %>
-  </div>
-  <div class="field">
-    <%= f.label :long %><br>
-    <%= f.text_field :long %>
-  </div>
-
-    <div class="field">
-      <%= f.label :city %><br>
-      <%= f.text_field :city %>
-    </div>
-
-    <div class="field">
-      <%= f.label :region %><br>
-      <%= f.text_field :region %>
-    </div>
-
-    <div class="field">
-      <%= f.label :country %><br>
-      <%= f.text_field :country %>
-    </div>
-
     <div class="form-group">
-      <label for="exampleInputEmail1">Info</label>
+      <label for="exampleInputEmail1">What's on your mind</label>
       <%= f.select :info, ["It's Sunny", "It's Rainy", "It's Cloudy", "It's Snowy",
                             "It's Hot", "It's Cold", "It's Foggy", "It's Stormy", "It's Windy"],
                    :class=> "form-control", :prompt => 'Select One' %>
     </div>
 
     <div class="form-group">
-      <label for="exampleInputEmail1">Picture</label>
+      <label for="exampleInputEmail1">Share Picture</label>
       <%= f.file_field :picture %>
     </div>
   <!--<div class="field">-->
@@ -52,11 +28,11 @@
   <!--</div>-->
 
   <% unless @http[:ip] == '127.0.0.1'%>
-    <%#= f.hidden_field :lat, :value => @http[:latitude] %>
-    <%#= f.hidden_field :long, :value => @http[:longitude]%>
-    <%#= f.hidden_field :city, :value => @http[:city] %>
-    <%#= f.hidden_field :region, :value => @http[:region_name] %>
-    <%#= f.hidden_field :country, :value => @http[:country_name] %>
+    <%= f.hidden_field :lat, :value => @http[:latitude] %>
+    <%= f.hidden_field :long, :value => @http[:longitude]%>
+    <%= f.hidden_field :city, :value => @http[:city] %>
+    <%= f.hidden_field :region, :value => @http[:region_name] %>
+    <%= f.hidden_field :country, :value => @http[:country_name] %>
   <% end %>
   <div class="actions">
     <%= f.submit 'Share', :class=> 'btn btn-success' %>

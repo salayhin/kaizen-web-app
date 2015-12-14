@@ -59746,3 +59746,539 @@ Processing by HomeController#index as HTML
   Rendered home/index.html.erb within layouts/application (1358.8ms)
   [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
 Completed 200 OK in 4824ms (Views: 2480.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-14 06:21:22 +0600
+Processing by HomeController#index as HTML
+  [1m[36mWeather Load (0.6ms)[0m  [1mSELECT "weathers".* FROM "weathers"[0m
+  Rendered home/index.html.erb within layouts/application (1405.4ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Completed 200 OK in 4401ms (Views: 2345.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/admin/dashboard.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-14 06:21:26 +0600
+
+
+Started GET "/assets/bootstrap-social.self-735a1477225b3fa4f744ce07cf17ead8fb1892438bc935244c186950da3aa46f.css?body=1" for 127.0.0.1 at 2015-12-14 06:21:26 +0600
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-12-14 06:21:26 +0600
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-12-14 06:21:26 +0600
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 127.0.0.1 at 2015-12-14 06:21:26 +0600
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-14 06:21:26 +0600
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-14 06:21:26 +0600
+
+
+Started GET "/assets/style.self-4673a0cdae73ec806880ebeb0750adc8a6bc392f3e8189272d4b2c9110f5db1c.css?body=1" for 127.0.0.1 at 2015-12-14 06:21:26 +0600
+
+
+Started GET "/assets/weathers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-14 06:21:26 +0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-12-14 06:21:26 +0600
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:26 +0600
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:26 +0600
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:26 +0600
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/underscore.self-8c17561264389571750ac522c272868d7105cf5e3f8af4761d09489b631d177c.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/gmaps/base.self-8dd1d1a22a7ff3bf4faa70885ea5f452367e7249102c52508c66d85ca396ee8b.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/gmaps/base/base.self-205b2646aece1ef0ad3d1ab1105220b23a1835f4d2b2cf3683b6c4feab1b2693.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/gmaps/objects/base_builder.self-2a2088185a25893bbee6bf3da7fde2f1160e33f9903e29e01701ecdf87326e98.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/gmaps/objects/builder.self-77682740ac05e1b18efcf955f75aabdc3877aeee1ee4d5d6fddc74f8a08009ea.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/gmaps/objects/handler.self-8c4adb1c24fee096be979ca7f532aba78c962577a1995039dc855fbf69d8639d.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.self-c6d6f37e996f50b27bf70e66b8956ee03cd4f3e35ae2e69c7b03e9dff7ea48e3.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/gmaps/google/objects/common.self-4b07ecd5e825fd2ba2793cb0323b0f19636ae2343ad8e8e9fe419152107b8ab4.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/gmaps/google/builders/bound.self-5e1789f8cf424576ea33abbcd8646eef24cecf948afec333df71e1a93b8c8747.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/gmaps/google/builders/circle.self-22f59f71fba88585adf1119557a1a6799db1f158b9443b987416531f6ae5a77e.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.self-3105ae58c95ef300c7e2f6e73cb3f8bb622f68cb90fefa18ac88b7bcb3d41a34.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/gmaps/google/builders/kml.self-7aa93a9fa8cc051fef97fba2627678a78ea7cff51414d22b65436f44761b35e9.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/gmaps/google/builders/map.self-1a54e3c284a461da33ca669d6d3e6daa6c232ab1010662e7d2f787246394912e.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/gmaps/google/builders/marker.self-f9375854e85de69a46a1a9b886ab3af9c7b34a5207e3968d49ab4cd094804d07.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/gmaps/google/builders/polyline.self-9d886100a1d6db94099f0e2dc1ab0460102abd1ec708fed3e9b61d0890f6abcd.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/gmaps/google/builders/polygon.self-e8eeee15715b26638701136d0228d9180589100e02d20b497a236676a8e2c217.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/gmaps/google/objects/bound.self-f5073ad49727084ce910748568403ef9258d3d4110abf4ccbd4346e08910b68c.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/gmaps/google/objects/circle.self-f1e59517711b1924099f9b6c712e5132160ce7b97ee6f86f06b3a183c033c2b4.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.self-0759e5692d9c111944153581ca07a4282d70e357115be43ec320af5b42323e7c.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/gmaps/google/objects/kml.self-36f8d12b6a0cdff8a2441ef0624c4078a6ca486fb03df27f81d71cb834d47ad7.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/gmaps/google/objects/marker.self-0ae41187d3d60587ad3634c6489a3fd6689e10a9baac12a8fdfaf68fced4d04a.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/gmaps/google/objects/map.self-1e8fd548e81cb18dc19d036ac0ff66f16417b173b56ba3c912e876be9f788be4.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/gmaps/google/objects/polygon.self-08ec4256825973be44bcb8f84ae7ab3c135c836f5d29befbd8bdeee1b21e3711.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/gmaps/google/objects/polyline.self-3a5389f97d057c4dffc0e359d96f047ec2434a70bf5662a266ffcaf71907e808.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/gmaps/google/primitives.self-5b8a3a670839d76c06f9877827daa0d739b27f8d6ebd346d7fc6006819755e65.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:27 +0600
+
+
+Started GET "/assets/gmaps/google.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:28 +0600
+
+
+Started GET "/assets/admin/dashboard.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:28 +0600
+
+
+Started GET "/assets/bootstrap.self-5afe7e91ef3675e2be97b8d060a7f3755d6dbc615b76df476df55143da70679f.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:28 +0600
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:28 +0600
+
+
+Started GET "/assets/weathers.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:28 +0600
+
+
+Started GET "/assets/application.self-b870f4765c2fcbf8cabec8478e3e32aa02ac855d9f609c451d170b187ee785a3.js?body=1" for 127.0.0.1 at 2015-12-14 06:21:28 +0600
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-14 06:28:08 +0600
+Processing by HomeController#index as HTML
+  [1m[36mWeather Load (0.8ms)[0m  [1mSELECT "weathers".* FROM "weathers"[0m
+  Rendered home/index.html.erb within layouts/application (1949.7ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Completed 200 OK in 5364ms (Views: 2887.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/bootstrap-social.self-735a1477225b3fa4f744ce07cf17ead8fb1892438bc935244c186950da3aa46f.css?body=1" for 127.0.0.1 at 2015-12-14 06:28:14 +0600
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-12-14 06:28:14 +0600
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-14 06:28:14 +0600
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-12-14 06:28:14 +0600
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 127.0.0.1 at 2015-12-14 06:28:14 +0600
+
+
+Started GET "/assets/admin/dashboard.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-14 06:28:14 +0600
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-14 06:28:14 +0600
+
+
+Started GET "/assets/style.self-4673a0cdae73ec806880ebeb0750adc8a6bc392f3e8189272d4b2c9110f5db1c.css?body=1" for 127.0.0.1 at 2015-12-14 06:28:14 +0600
+
+
+Started GET "/assets/weathers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-14 06:28:14 +0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-12-14 06:28:14 +0600
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:14 +0600
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:14 +0600
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:14 +0600
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:14 +0600
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:14 +0600
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:14 +0600
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:14 +0600
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:14 +0600
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:14 +0600
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:14 +0600
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:14 +0600
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:14 +0600
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:14 +0600
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:14 +0600
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:14 +0600
+
+
+Started GET "/assets/underscore.self-8c17561264389571750ac522c272868d7105cf5e3f8af4761d09489b631d177c.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:15 +0600
+
+
+Started GET "/assets/gmaps/base.self-8dd1d1a22a7ff3bf4faa70885ea5f452367e7249102c52508c66d85ca396ee8b.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:15 +0600
+
+
+Started GET "/assets/gmaps/base/base.self-205b2646aece1ef0ad3d1ab1105220b23a1835f4d2b2cf3683b6c4feab1b2693.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:15 +0600
+
+
+Started GET "/assets/gmaps/objects/builder.self-77682740ac05e1b18efcf955f75aabdc3877aeee1ee4d5d6fddc74f8a08009ea.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:15 +0600
+
+
+Started GET "/assets/gmaps/objects/base_builder.self-2a2088185a25893bbee6bf3da7fde2f1160e33f9903e29e01701ecdf87326e98.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:15 +0600
+
+
+Started GET "/assets/gmaps/objects/handler.self-8c4adb1c24fee096be979ca7f532aba78c962577a1995039dc855fbf69d8639d.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:15 +0600
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.self-c6d6f37e996f50b27bf70e66b8956ee03cd4f3e35ae2e69c7b03e9dff7ea48e3.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:15 +0600
+
+
+Started GET "/assets/gmaps/google/objects/common.self-4b07ecd5e825fd2ba2793cb0323b0f19636ae2343ad8e8e9fe419152107b8ab4.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:15 +0600
+
+
+Started GET "/assets/gmaps/google/builders/bound.self-5e1789f8cf424576ea33abbcd8646eef24cecf948afec333df71e1a93b8c8747.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:15 +0600
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.self-3105ae58c95ef300c7e2f6e73cb3f8bb622f68cb90fefa18ac88b7bcb3d41a34.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:15 +0600
+
+
+Started GET "/assets/gmaps/google/builders/circle.self-22f59f71fba88585adf1119557a1a6799db1f158b9443b987416531f6ae5a77e.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:15 +0600
+
+
+Started GET "/assets/gmaps/google/builders/kml.self-7aa93a9fa8cc051fef97fba2627678a78ea7cff51414d22b65436f44761b35e9.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:15 +0600
+
+
+Started GET "/assets/gmaps/google/builders/map.self-1a54e3c284a461da33ca669d6d3e6daa6c232ab1010662e7d2f787246394912e.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:15 +0600
+
+
+Started GET "/assets/gmaps/google/builders/marker.self-f9375854e85de69a46a1a9b886ab3af9c7b34a5207e3968d49ab4cd094804d07.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:15 +0600
+
+
+Started GET "/assets/gmaps/google/builders/polygon.self-e8eeee15715b26638701136d0228d9180589100e02d20b497a236676a8e2c217.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:15 +0600
+
+
+Started GET "/assets/gmaps/google/builders/polyline.self-9d886100a1d6db94099f0e2dc1ab0460102abd1ec708fed3e9b61d0890f6abcd.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:15 +0600
+
+
+Started GET "/assets/gmaps/google/objects/bound.self-f5073ad49727084ce910748568403ef9258d3d4110abf4ccbd4346e08910b68c.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:15 +0600
+
+
+Started GET "/assets/gmaps/google/objects/circle.self-f1e59517711b1924099f9b6c712e5132160ce7b97ee6f86f06b3a183c033c2b4.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:15 +0600
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.self-0759e5692d9c111944153581ca07a4282d70e357115be43ec320af5b42323e7c.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:15 +0600
+
+
+Started GET "/assets/gmaps/google/objects/map.self-1e8fd548e81cb18dc19d036ac0ff66f16417b173b56ba3c912e876be9f788be4.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:15 +0600
+
+
+Started GET "/assets/gmaps/google/objects/kml.self-36f8d12b6a0cdff8a2441ef0624c4078a6ca486fb03df27f81d71cb834d47ad7.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:15 +0600
+
+
+Started GET "/assets/gmaps/google/objects/marker.self-0ae41187d3d60587ad3634c6489a3fd6689e10a9baac12a8fdfaf68fced4d04a.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:15 +0600
+
+
+Started GET "/assets/gmaps/google/objects/polygon.self-08ec4256825973be44bcb8f84ae7ab3c135c836f5d29befbd8bdeee1b21e3711.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:15 +0600
+
+
+Started GET "/assets/gmaps/google/objects/polyline.self-3a5389f97d057c4dffc0e359d96f047ec2434a70bf5662a266ffcaf71907e808.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:15 +0600
+
+
+Started GET "/assets/gmaps/google/primitives.self-5b8a3a670839d76c06f9877827daa0d739b27f8d6ebd346d7fc6006819755e65.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:15 +0600
+
+
+Started GET "/assets/gmaps/google.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:15 +0600
+
+
+Started GET "/assets/admin/dashboard.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:15 +0600
+
+
+Started GET "/assets/bootstrap.self-5afe7e91ef3675e2be97b8d060a7f3755d6dbc615b76df476df55143da70679f.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:15 +0600
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:15 +0600
+
+
+Started GET "/assets/weathers.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:15 +0600
+
+
+Started GET "/assets/application.self-b870f4765c2fcbf8cabec8478e3e32aa02ac855d9f609c451d170b187ee785a3.js?body=1" for 127.0.0.1 at 2015-12-14 06:28:15 +0600
+
+
+Started GET "/weathers/new" for 127.0.0.1 at 2015-12-14 06:28:21 +0600
+Processing by WeathersController#new as HTML
+  Rendered weathers/_form.html.erb (14.7ms)
+  Rendered weathers/new.html.erb within layouts/application (18.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 1912ms (Views: 1064.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/weathers/new" for 127.0.0.1 at 2015-12-14 06:29:06 +0600
+Processing by WeathersController#new as HTML
+  Rendered weathers/_form.html.erb (13.1ms)
+  Rendered weathers/new.html.erb within layouts/application (16.2ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 2]]
+Completed 200 OK in 2004ms (Views: 958.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/admin/dashboard.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-14 06:29:08 +0600
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 127.0.0.1 at 2015-12-14 06:29:08 +0600
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-12-14 06:29:08 +0600
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-12-14 06:29:08 +0600
+
+
+Started GET "/assets/bootstrap-social.self-735a1477225b3fa4f744ce07cf17ead8fb1892438bc935244c186950da3aa46f.css?body=1" for 127.0.0.1 at 2015-12-14 06:29:08 +0600
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-14 06:29:08 +0600
+
+
+Started GET "/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-14 06:29:08 +0600
+
+
+Started GET "/assets/style.self-4673a0cdae73ec806880ebeb0750adc8a6bc392f3e8189272d4b2c9110f5db1c.css?body=1" for 127.0.0.1 at 2015-12-14 06:29:08 +0600
+
+
+Started GET "/assets/weathers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-14 06:29:08 +0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-12-14 06:29:08 +0600
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:08 +0600
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:08 +0600
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/underscore.self-8c17561264389571750ac522c272868d7105cf5e3f8af4761d09489b631d177c.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/gmaps/base.self-8dd1d1a22a7ff3bf4faa70885ea5f452367e7249102c52508c66d85ca396ee8b.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/gmaps/base/base.self-205b2646aece1ef0ad3d1ab1105220b23a1835f4d2b2cf3683b6c4feab1b2693.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/gmaps/objects/base_builder.self-2a2088185a25893bbee6bf3da7fde2f1160e33f9903e29e01701ecdf87326e98.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/gmaps/objects/builder.self-77682740ac05e1b18efcf955f75aabdc3877aeee1ee4d5d6fddc74f8a08009ea.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/gmaps/objects/handler.self-8c4adb1c24fee096be979ca7f532aba78c962577a1995039dc855fbf69d8639d.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.self-c6d6f37e996f50b27bf70e66b8956ee03cd4f3e35ae2e69c7b03e9dff7ea48e3.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/gmaps/google/objects/common.self-4b07ecd5e825fd2ba2793cb0323b0f19636ae2343ad8e8e9fe419152107b8ab4.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/gmaps/google/builders/bound.self-5e1789f8cf424576ea33abbcd8646eef24cecf948afec333df71e1a93b8c8747.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/gmaps/google/builders/circle.self-22f59f71fba88585adf1119557a1a6799db1f158b9443b987416531f6ae5a77e.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.self-3105ae58c95ef300c7e2f6e73cb3f8bb622f68cb90fefa18ac88b7bcb3d41a34.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/gmaps/google/builders/kml.self-7aa93a9fa8cc051fef97fba2627678a78ea7cff51414d22b65436f44761b35e9.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/gmaps/google/builders/map.self-1a54e3c284a461da33ca669d6d3e6daa6c232ab1010662e7d2f787246394912e.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/gmaps/google/builders/polygon.self-e8eeee15715b26638701136d0228d9180589100e02d20b497a236676a8e2c217.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/gmaps/google/builders/marker.self-f9375854e85de69a46a1a9b886ab3af9c7b34a5207e3968d49ab4cd094804d07.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/gmaps/google/builders/polyline.self-9d886100a1d6db94099f0e2dc1ab0460102abd1ec708fed3e9b61d0890f6abcd.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/gmaps/google/objects/bound.self-f5073ad49727084ce910748568403ef9258d3d4110abf4ccbd4346e08910b68c.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/gmaps/google/objects/circle.self-f1e59517711b1924099f9b6c712e5132160ce7b97ee6f86f06b3a183c033c2b4.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.self-0759e5692d9c111944153581ca07a4282d70e357115be43ec320af5b42323e7c.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/gmaps/google/objects/kml.self-36f8d12b6a0cdff8a2441ef0624c4078a6ca486fb03df27f81d71cb834d47ad7.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/gmaps/google/objects/map.self-1e8fd548e81cb18dc19d036ac0ff66f16417b173b56ba3c912e876be9f788be4.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/gmaps/google/objects/marker.self-0ae41187d3d60587ad3634c6489a3fd6689e10a9baac12a8fdfaf68fced4d04a.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/gmaps/google/objects/polygon.self-08ec4256825973be44bcb8f84ae7ab3c135c836f5d29befbd8bdeee1b21e3711.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/gmaps/google/objects/polyline.self-3a5389f97d057c4dffc0e359d96f047ec2434a70bf5662a266ffcaf71907e808.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:09 +0600
+
+
+Started GET "/assets/gmaps/google/primitives.self-5b8a3a670839d76c06f9877827daa0d739b27f8d6ebd346d7fc6006819755e65.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:10 +0600
+
+
+Started GET "/assets/gmaps/google.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:10 +0600
+
+
+Started GET "/assets/admin/dashboard.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:10 +0600
+
+
+Started GET "/assets/bootstrap.self-5afe7e91ef3675e2be97b8d060a7f3755d6dbc615b76df476df55143da70679f.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:10 +0600
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:10 +0600
+
+
+Started GET "/assets/weathers.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:10 +0600
+
+
+Started GET "/assets/application.self-b870f4765c2fcbf8cabec8478e3e32aa02ac855d9f609c451d170b187ee785a3.js?body=1" for 127.0.0.1 at 2015-12-14 06:29:10 +0600
