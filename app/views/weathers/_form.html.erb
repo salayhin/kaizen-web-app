@@ -26,8 +26,12 @@
     <%#= f.label :user_id %><br>
     <!--<%#= f.number_field :user_id %>-->
   <!--</div>-->
+  <% if @http[:ip] == '127.0.0.1' %>
+        <%= f.hidden_field :lat, :value => '23.43' %>
+        <%= f.hidden_field :long, :value =>  '90.96' %>
+  <% end %>
 
-  <% unless @http[:ip] == '127.0.0.1'%>
+  <% unless @http[:ip] == '127.0.0.1' %>
     <%= f.hidden_field :lat, :value => @http[:latitude] %>
     <%= f.hidden_field :long, :value => @http[:longitude]%>
     <%= f.hidden_field :city, :value => @http[:city] %>

@@ -13,10 +13,10 @@
         <% @weathers.each do |w| %>
             <div class="col-xs-4 col-lg-4">
               <% wu =  get_detail_info(w.lat, w.long) %>
-              <h4><%= w.info %>- <%= wu['control']['o'] %></h4>
-              <%= image_tag w.picture_url, :width => '20px', :height => '220px'%>
-              <p>Today's weather is <%= wu['WX.en_US'] %></p>
-              <p><%= wu['observation']['AIRTMP'] %> Degree Celsius</p>
+              <h4><%= w.info %>- <%= wu['control']['o'] if wu['control']['o'].present? %></h4>
+              <%= image_tag w.picture_url, :width => '220px', :height => '170px'%>
+              <p>Today's weather is <%= wu['WX.en_US'] if wu['WX.en_US'].present? %></p>
+              <p><%= wu['observation']['AIRTMP'] if wu['observation']['AIRTMP'].present? %> Degree Celsius</p>
             </div>
         <% end %>
       </div><!--/row-->
@@ -65,15 +65,15 @@
 <script type="text/javascript">
     var handler = Gmaps.build('Google');
     handler.buildMap({ internal: {id: 'multi_markers'}}, function(){
-        var markers = handler.addMarkers([
-            { lat: 23.43, lng: 90.26, infowindow: "It's Sunny"},
-            { lat: 23.35, lng: 90.30, infowindow: "It's Sunny"},
-            { lat: 21.26, lng: 91.59, infowindow: "It's Cold"},
-            { lat: 25.33, lng: 88.43, infowindow: "It's Sunny"},
-            { lat: 24.52, lng: 89.22, infowindow: "It's Cold"},
-            { lat: 24.59, lng: 91.52, infowindow: "It's Cold"},
-        ]);
-          //var markers = handler.addMarker(<%#=raw @hash.to_json %>);
+//        var markers = handler.addMarkers([
+//            { lat: 23.43, lng: 90.26, infowindow: "It's Sunny"},
+//            { lat: 23.35, lng: 90.30, infowindow: "It's Sunny"},
+//            { lat: 21.26, lng: 91.59, infowindow: "It's Cold"},
+//            { lat: 25.33, lng: 88.43, infowindow: "It's Sunny"},
+//            { lat: 24.52, lng: 89.22, infowindow: "It's Cold"},
+//            { lat: 24.59, lng: 91.52, infowindow: "It's Cold"},
+//        ]);
+          var markers = handler.addMarkers(<%=raw @hash.to_json %>);
         handler.bounds.extendWith(markers);
         handler.fitMapToBounds();
     });

@@ -3,10 +3,16 @@ class HomeController < ApplicationController
   require 'json'
 
   def index
-    @weathers = Weather.all
-    @hash = Gmaps4rails.build_markers(@weathers) do |weather, marker|
-      marker.lat weather.lat
-      marker.lng weather.long
+    @weathers = Weather.order('id desc')
+    # @hash = Gmaps4rails.build_markers(@weathers) do |weather, marker|
+    #   marker.lat weather.lat
+    #   marker.lng weather.long
+    # end
+
+    @hash = []
+    @weathers.each do |w|
+      h = {:lat => w.lat, :lng => w.long, :infowindow => w.info}
+      @hash.push(h)
     end
 
     ip = request.remote_ip
