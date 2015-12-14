@@ -38,7 +38,7 @@ class WeathersController < ApplicationController
 
     respond_to do |format|
       if @weather.save
-        format.html { redirect_to @weather, notice: 'Weather was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Weather was successfully created.' }
         format.json { render :show, status: :created, location: @weather }
       else
         format.html { render :new }
