@@ -29,6 +29,10 @@ class WeathersController < ApplicationController
 
   # GET /weathers/1/edit
   def edit
+    ip = request.remote_ip
+    #url = 'ipinfo.io/'+ip
+    #str = Curl.get(url)
+    @http = GeoIp.geolocation(ip)
   end
 
   # POST /weathers
@@ -52,7 +56,7 @@ class WeathersController < ApplicationController
   def update
     respond_to do |format|
       if @weather.update(weather_params)
-        format.html { redirect_to @weather, notice: 'Weather was successfully updated.' }
+        format.html { redirect_to root_path, notice: 'Weather was successfully updated.' }
         format.json { render :show, status: :ok, location: @weather }
       else
         format.html { render :edit }
