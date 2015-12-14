@@ -13,3 +13,4 @@ puts "#{User.last.email} created!"
 User.last.roles << Role.first
 
 puts "Role Assigned!"
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')

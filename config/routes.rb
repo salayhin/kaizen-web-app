@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
 
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   resources :helps
   resources :weathers
   get 'shop' => 'home#shop'
-  namespace :admin do
-    get 'dashboard' => 'dashboard#index'
-    resources :users
-  end
+
+  # namespace :admin do
+  #   get 'dashboard' => 'dashboard#index'
+  #   resources :users
+  # end
 
   devise_for :users, path_names: { sign_up: 'register' },
              controllers: {  omniauth_callbacks:  'users/omniauth_callbacks',
