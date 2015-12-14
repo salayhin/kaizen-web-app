@@ -11,14 +11,13 @@
 
       <div class="row">
         <% @weathers.each do |w| %>
-            <div class="col-xs-6 col-lg-6">
+            <div class="col-xs-4 col-lg-4">
               <% wu =  get_detail_info(w.lat, w.long) %>
-              <h4><%= w.info %> From <%= wu['control']['o'] %></h4>
-              <%= image_tag w.picture_url %>
+              <h4><%= w.info %>- <%= wu['control']['o'] %></h4>
+              <%= image_tag w.picture_url, :width => '20px', :height => '220px'%>
               <p>Today's weather is <%= wu['WX.en_US'] %></p>
               <p><%= wu['observation']['AIRTMP'] %> Degree Celsius</p>
-            </div><!--/.col-xs-6.col-lg-4-->
-
+            </div>
         <% end %>
       </div><!--/row-->
     </div><!--/.col-xs-12.col-sm-9-->
