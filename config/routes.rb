@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :helps
   resources :weathers
+  get 'shop' => 'home#shop'
   namespace :admin do
     get 'dashboard' => 'dashboard#index'
     resources :users

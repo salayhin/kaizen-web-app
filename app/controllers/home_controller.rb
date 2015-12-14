@@ -33,4 +33,8 @@ class HomeController < ApplicationController
     @weather_update = JSON.parse(open(url).read)
 
   end
+
+  def shop
+    
+  end
 end

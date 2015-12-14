@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @help.lat %>
+</p>
+
+<p>
+  <strong>Long:</strong>
+  <%= @help.long %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @help.message %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @help.photo %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @help.user_id %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @help.city %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @help.region %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @help.country %>
+</p>
+
+<%= link_to 'Edit', edit_help_path(@help) %> |
+<%= link_to 'Back', helps_path %>

@@ -1,0 +1,85 @@
+<div class="col-xs-12">
+
+
+  <div class="row row-offcanvas row-offcanvas-right">
+
+    <div class="col-xs-12 col-sm-9">
+      <h3>Seeking help from all location</h3>
+      <div class="">
+        <div id="multi_markers" style='width: 800px; height: 400px;'></div>
+      </div>
+
+      <div class="row">
+        <h3>Messages From all locations</h3>
+        <% @helps.each do |h| %>
+            <div class="col-xs-4 col-lg-4">
+              <% wu =  get_detail_info(h.lat, h.long) %>
+
+              <%= image_tag h.photo_url, :width => '220px', :height => '170px'%>
+              <p>From: <%= wu['control']['o'] if wu['control']['o'].present? %></p>
+              <h4><%= h.message %></h4>
+              <p>Today's weather is <%= wu['WX.en_US'] if wu['WX.en_US'].present? %></p>
+              <p><%= wu['observation']['AIRTMP'] if wu['observation']['AIRTMP'].present? %> Degree Celsius</p>
+            </div>
+        <% end %>
+      </div><!--/row-->
+    </div><!--/.col-xs-12.col-sm-9-->
+
+
+    <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+      <div style="border: 1px solid aliceblue; padding: 5px">
+
+        <h4>Update From weathernews.jp</h4>
+        <h5><strong>Your Current Location:</strong> <%= @weather_update.first['control']['o'] %></h5>
+        <p><strong>Today's Weather is:</strong> <%= @weather_update.first['observation']['WX'] %></p>
+        <p><%= @weather_update.first['observation']['AIRTMP'] %> Degree Celsius</p>
+        <p><strong>Sunrise: </strong><%= @weather_update.first['astro']['sunrise'] %>
+          <strong>Sunset:</strong> <%= @weather_update.first['astro']['sunset'] %></p>
+        <% if @weather_update.first['observation']['WX'] == '500' %>
+            <p><strong>Great Day! Have Fun!</strong></p>
+        <% end %>
+      </div>
+
+      <div style="border: 1px solid aliceblue; padding: 5px">
+
+        <h4>Upcoming Weather Update</h4>
+        <% @weather_update.first['mrf'].take(5).each do |m| %>
+            <p><strong>Date:</strong> <%= m['time'] %></p>
+            <p><strong>Weather Code: </strong><%= m['WX'] %></p>
+            <p><strong>Maximum Temperature of day:</strong> <%= m['MAXT'] %></p>
+            <p><strong>Minimum Temperature of day:</strong> <%= m['MINT'] %></p>
+            <p><strong>Chance of Rain:</strong> <%= m['POP']%>%</p>
+            <hr />
+        <% end %>
+
+
+      </div>
+
+    </div><!--/.sidebar-offcanvas-->
+  </div><!--/row-->
+
+</div>
+
+
+
+<script src="//maps.google.com/maps/api/js?v=3.18&sensor=false&client=&key=&libraries=geometry&language=&hl=&region="></script>
+<script src="//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js"></script>
+<script src='//google-maps-utility-library-v3.googlecode.com/svn/tags/infobox/1.1.9/src/infobox_packed.js'></script>
+
+
+<script type="text/javascript">
+    var handler = Gmaps.build('Google');
+    handler.buildMap({ internal: {id: 'multi_markers'}}, function(){
+//        var markers = handler.addMarkers([
+//            { lat: 23.43, lng: 90.26, infowindow: "It's Sunny"},
+//            { lat: 23.35, lng: 90.30, infowindow: "It's Sunny"},
+//            { lat: 21.26, lng: 91.59, infowindow: "It's Cold"},
+//            { lat: 25.33, lng: 88.43, infowindow: "It's Sunny"},
+//            { lat: 24.52, lng: 89.22, infowindow: "It's Cold"},
+//            { lat: 24.59, lng: 91.52, infowindow: "It's Cold"},
+//        ]);
+        var markers = handler.addMarkers(<%=raw @hash.to_json %>);
+        handler.bounds.extendWith(markers);
+        handler.fitMapToBounds();
+    });
+</script>

@@ -1,4 +1,4 @@
-<h1>Share Weather Info</h1>
+<h3>Share Weather Info</h3>
 <% unless @http[:ip] == '127.0.0.1' %>
 <p>Your Current Location: </p>
 <p><%= @http[:city] if @http[:city].present? %>, @http[:country_name] if @http[:country_name].present?</p>

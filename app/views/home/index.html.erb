@@ -17,6 +17,9 @@
               <%= image_tag w.picture_url, :width => '220px', :height => '170px'%>
               <p>Today's weather is <%= wu['WX.en_US'] if wu['WX.en_US'].present? %></p>
               <p><%= wu['observation']['AIRTMP'] if wu['observation']['AIRTMP'].present? %> Degree Celsius</p>
+              <% if w.info == "It's Cold" %>
+                <p><%= link_to 'Send Gift To Your friend', shop_path %></p>
+              <% end %>
             </div>
         <% end %>
       </div><!--/row-->
@@ -27,23 +30,25 @@
       <div style="border: 1px solid aliceblue; padding: 5px">
 
         <h4>Update From weathernews.jp</h4>
-        <h5>Your Current Location: <%= @weather_update.first['control']['o'] %></h5>
-        <p>Today's Weather is <%= @weather_update.first['observation']['WX.en_US'] %></p>
+        <h5><strong>Your Current Location:</strong> <%= @weather_update.first['control']['o'] %></h5>
+        <p><strong>Today's Weather is:</strong> <%= @weather_update.first['observation']['WX'] %></p>
         <p><%= @weather_update.first['observation']['AIRTMP'] %> Degree Celsius</p>
-        <p>Sunrise: <%= @weather_update.first['astro']['sunrise'] %>
-          Sunset: <%= @weather_update.first['astro']['sunset'] %></p>
-
+        <p><strong>Sunrise: </strong><%= @weather_update.first['astro']['sunrise'] %>
+          <strong>Sunset:</strong> <%= @weather_update.first['astro']['sunset'] %></p>
+        <% if @weather_update.first['observation']['WX'] == '500' %>
+            <p><strong>Great Day! Have Fun!</strong></p>
+      <% end %>
       </div>
 
       <div style="border: 1px solid aliceblue; padding: 5px">
 
         <h4>Upcoming Weather Update</h4>
         <% @weather_update.first['mrf'].take(5).each do |m| %>
-            <p>Date: <%= m['time'] %></p>
-            <p>Weather Code <%= m['WX'] %></p>
-            <p>Maximum Temperature of day: <%= m['MAXT'] %></p>
-            <p>Minimum Temperature of day: <%= m['MINT'] %></p>
-            <p>Chance of Rain: <%= m['POP']%>%</p>
+            <p><strong>Date:</strong> <%= m['time'] %></p>
+            <p><strong>Weather Code: </strong><%= m['WX'] %></p>
+            <p><strong>Maximum Temperature of day:</strong> <%= m['MAXT'] %></p>
+            <p><strong>Minimum Temperature of day:</strong> <%= m['MINT'] %></p>
+            <p><strong>Chance of Rain:</strong> <%= m['POP']%>%</p>
             <hr />
         <% end %>
 
