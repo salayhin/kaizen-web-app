@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :helps
   resources :weathers
   get 'shop' => 'home#shop'
+  get 'about' => 'home#about'
 
   # namespace :admin do
   #   get 'dashboard' => 'dashboard#index'

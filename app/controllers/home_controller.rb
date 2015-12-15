@@ -37,4 +37,8 @@ class HomeController < ApplicationController
   def shop
     
   end
+
+  def about
+    
+  end
 end
