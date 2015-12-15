@@ -9,13 +9,68 @@
         <div id="multi_markers" style='width: 800px; height: 400px;'></div>
       </div>
 
+      <h3>Weather Updates From all locations</h3>
+
       <div class="row">
+
+        <div class="col-xs-4 col-lg-4">
+          <%# wu =  get_detail_info(w.lat, w.long) %>
+          <h4>It's Cold - BRLN</h4>
+          <%= image_tag 'sw.jpg', :width => '220px', :height => '170px'%>
+          <p>Today's weather is Cold</p>
+          <p>1.5 Degree Celsius</p>
+              <p><%= link_to 'Send Gift To Your friend', shop_path %></p>
+        </div>
+
+        <div class="col-xs-4 col-lg-4">
+          <%# wu =  get_detail_info(w.lat, w.long) %>
+          <h4>It's Cold - AMS</h4>
+          <%= image_tag 'cold_1.jpg', :width => '220px', :height => '170px'%>
+          <p>Today's weather is Cold</p>
+          <p>5.5 Degree Celsius</p>
+          <p><%= link_to 'Send Gift To Your friend', shop_path %></p>
+        </div>
+
+        <div class="col-xs-4 col-lg-4">
+          <%# wu =  get_detail_info(w.lat, w.long) %>
+          <h4>It's Cold - DHAKA</h4>
+          <%= image_tag 'running-in-cold-weather.gif', :width => '220px', :height => '170px'%>
+          <p>Today's weather is Cold</p>
+          <p>20.5 Degree Celsius</p>
+          <p><%= link_to 'Send Gift To Your friend', shop_path %></p>
+        </div>
+
+        <div class="col-xs-4 col-lg-4">
+          <%# wu =  get_detail_info(w.lat, w.long) %>
+          <h4>It's Cold - DHAKA</h4>
+          <%= image_tag 'cold_weather.jpg', :width => '220px', :height => '170px'%>
+          <p>Today's weather is Cold</p>
+          <p>20.5 Degree Celsius</p>
+          <p><%= link_to 'Send Gift To Your friend', shop_path %></p>
+        </div>
+
+        <div class="col-xs-4 col-lg-4">
+          <%# wu =  get_detail_info(w.lat, w.long) %>
+          <h4>It's Cloudy - DHAKA</h4>
+          <%= image_tag 'cloudy_1.jpg', :width => '220px', :height => '170px'%>
+          <p>Today's weather is Cloudy</p>
+          <p>20.5 Degree Celsius</p>
+        </div>
+
+        <div class="col-xs-4 col-lg-4">
+          <%# wu =  get_detail_info(w.lat, w.long) %>
+          <h4>It's Cloudy - DHAKA</h4>
+          <%= image_tag 'cloudy_2.jpg', :width => '220px', :height => '170px'%>
+          <p>Today's weather is Cloudy</p>
+          <p>20.5 Degree Celsius</p>
+        </div>
+
         <% @weathers.each do |w| %>
             <div class="col-xs-4 col-lg-4">
               <% wu =  get_detail_info(w.lat, w.long) %>
               <h4><%= w.info %>- <%= wu['control']['o'] if wu['control']['o'].present? %></h4>
               <%= image_tag w.picture_url, :width => '220px', :height => '170px'%>
-              <p>Today's weather is <%= wu['WX.en_US'] if wu['WX.en_US'].present? %></p>
+              <p>Today's weather is <%= wu['observation']['WX.en_US'] if wu['observation']['WX.en_US'].present? %></p>
               <p><%= wu['observation']['AIRTMP'] if wu['observation']['AIRTMP'].present? %> Degree Celsius</p>
               <% if w.info == "It's Cold" %>
                 <p><%= link_to 'Send Gift To Your friend', shop_path %></p>

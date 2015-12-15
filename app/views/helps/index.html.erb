@@ -11,6 +11,52 @@
 
       <div class="row">
         <h3>Messages From all locations</h3>
+
+        <div class="col-xs-4 col-lg-4">
+          <%# wu =  get_detail_info(h.lat, h.long) %>
+          <%= image_tag 'sw.jpg', :width => '220px', :height => '170px'%>
+          <p>From: BRLN</p>
+          <h4>Please Help</h4>
+          <p>Today's weather is Cold</p>
+          <p>1.5 Degree Celsius</p>
+        </div>
+
+        <div class="col-xs-4 col-lg-4">
+          <%# wu =  get_detail_info(h.lat, h.long) %>
+          <%= image_tag 'cold_2.jpg', :width => '220px', :height => '170px'%>
+          <p>From: MOR</p>
+          <h4>Please Stay Safe!</h4>
+          <p>Today's weather is Stormy</p>
+          <p>25.5 Degree Celsius</p>
+        </div>
+
+        <div class="col-xs-4 col-lg-4">
+          <%# wu =  get_detail_info(h.lat, h.long) %>
+          <%= image_tag 'road_block.jpg', :width => '220px', :height => '170px'%>
+          <p>From: ZUG</p>
+          <h4>Road Blocked</h4>
+          <p>Today's weather is Cold</p>
+          <p>0.5 Degree Celsius</p>
+        </div>
+
+        <div class="col-xs-4 col-lg-4">
+          <%# wu =  get_detail_info(h.lat, h.long) %>
+          <%= image_tag 'ice.jpg', :width => '220px', :height => '170px'%>
+          <p>From: ZUG</p>
+          <h4>I am stuck</h4>
+          <p>Today's weather is Cold</p>
+          <p>0.5 Degree Celsius</p>
+        </div>
+
+        <div class="col-xs-4 col-lg-4">
+          <%# wu =  get_detail_info(h.lat, h.long) %>
+          <%= image_tag 'ferri.jpg', :width => '220px', :height => '170px'%>
+          <p>From: DHAKA</p>
+          <h4>FOGGY Weather,Stuck at Meghna</h4>
+          <p>Today's weather is Cold</p>
+          <p>20.5 Degree Celsius</p>
+        </div>
+
         <% @helps.each do |h| %>
             <div class="col-xs-4 col-lg-4">
               <% wu =  get_detail_info(h.lat, h.long) %>
@@ -18,7 +64,7 @@
               <%= image_tag h.photo_url, :width => '220px', :height => '170px'%>
               <p>From: <%= wu['control']['o'] if wu['control']['o'].present? %></p>
               <h4><%= h.message %></h4>
-              <p>Today's weather is <%= wu['WX.en_US'] if wu['WX.en_US'].present? %></p>
+              <p>Today's weather is <%= wu['observation']['WX.en_US'] if wu['observation']['WX.en_US'].present? %></p>
               <p><%= wu['observation']['AIRTMP'] if wu['observation']['AIRTMP'].present? %> Degree Celsius</p>
             </div>
         <% end %>
